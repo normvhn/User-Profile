@@ -119,40 +119,32 @@
             </div>
 
             <!-- ======================= Cards ================== -->
+
             <div class="card-book">
                 <div class="card">
-                    <img src="assets/imgs/test.jpg" alt="img of the therapist">
-                        <div class="info">
-                            <h2>Therapist Name</h2>
-                            <p>Expertise: </p>
-                            <p>Date: 01/01/2023</p>
-                            <p>Location: </p>
-                            <p>Amount: P250</p>
-
-                        </div>
-                    <div class="button-group">
-                      <button class="active-button">Active</button>
-                      <button class="pending-button">Pending</button>
-                      <button class="complete-button">Complete</button>
-                    </div>
+                  <img src="assets/imgs/f1.jpg" alt="User Profile Picture">
+                <div class="user-info">
+                  <h2>Name: <span>Maritess Temporal</span></h2>
+                  <p>Contact#: <span>0945717478845</span></p>
+                  <p>BookingID: <span>121211</span></p>
+                  <p>Address: <span>134 Trinity Avenue Cubao QC</span></p>
+                  <div class="time-sched">
+                    <p>Schedule: <span>Thursday 10AM-12PM 03/23/2023</span></p>
+                  </div>
+                  <div class="services-wrapper">
+                    <p>Services:</p>
+                    <ul>
+                      <li>Swedish Massage</li>
+                      <li>Manicure and Pedicure</li>
+                    </ul>
+                  </div>
                 </div>
-
-                <div class="card">
-                    <img src="assets/imgs/test.jpg" alt="img of the therapist">
-                        <div class="info">
-                            <h2>Therapist Name</h2>
-                            <p>Expertise: </p>
-                            <p>Date: 01/01/2023</p>
-                            <p>Location: </p>
-                            <p>Amount: P250</p>
-
-                        </div>
-                    <div class="button-group">
-                      <button class="active-button">Active</button>
-                      <button class="pending-button">Pending</button>
-                      <button class="complete-button">Complete</button>
-                    </div>
+                <div class="status-badge status-cancelled">Cancelled</div>
+                <div class="buttons">
+                  <button class="accept">Accept</button>
+                  <button class="decline">Decline</button>
                 </div>
+              </div>
 
                 <div class="card">
                     <img src="assets/imgs/test.jpg" alt="img of the therapist">
@@ -208,6 +200,50 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+          // Set the order ID in the modal when the View button is clicked
+          $('.view-order-btn').click(function() {
+            var orderId = $(this).closest('tr').find('td:first').text();
+            $('#viewOrderModal').find('.modal-body p:first-child').text('Order ID: ' + orderId);
+          });
+          
+          // Send a request to pay the order when the Pay button is clicked
+          $('.pay-order-btn').click(function() {
+            var orderId = $(this).closest('.modal-content').find('.modal-body p:first-child').text().replace('Order ID: ', '');
+            // send a request to pay the order with the given order ID
+            $.ajax({
+              method: 'POST',
+              url: '/pay-order',
+              data: { orderId: orderId },
+              success: function(response) {
+                // handle the successful payment (e.g., update the order status, display a confirmation message)
+              },
+              error: function(xhr, status, error) {
+                // handle the payment error (e.g., display an error message)
+              }
+            });
+          });
+          
+          // Send a request to cancel the order when the Cancel button is clicked
+          $('.cancel-order-btn').click(function() {
+            var orderId = $(this).closest('.modal-content').find('.modal-body p:first-child').text().replace('Order ID: ', '');
+            // send a request to cancel the order with the given order ID
+            $.ajax({
+              method: 'POST',
+              url: '/cancel-order',
+              data: { orderId: orderId },
+              success: function(response) {
+                // handle the successful cancellation (e.g., update the order status, display a confirmation message)
+              },
+              error: function(xhr, status, error) {
+                // handle the cancellation error (e.g., display an error message)
+              }
+            });
+          });
+        });
+      </script>
 
     <!-- =========== Scripts =========  -->
     <script src="assets/js/main.js"></script>

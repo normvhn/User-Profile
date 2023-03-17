@@ -44,7 +44,7 @@
                 </li>
 
                 <li>
-                    <a href="settings.html">
+                    <a href="profile.html">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
@@ -62,16 +62,16 @@
                 </li>
 
                 <li>
-                    <a href="appointment.html">
+                    <a href="booking.html">
                         <span class="icon">
                             <ion-icon name="alarm-outline"></ion-icon>
                         </span>
-                        <span class="title">Appointment</span>
+                        <span class="title">Booking</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="settings.html">
+                    <a href="reviews.html">
                         <span class="icon">
                             <ion-icon name="star-outline"></ion-icon>
                         </span>
@@ -80,7 +80,7 @@
                 </li>
 
                 <li>
-                    <a href="changePassword.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="cash-outline"></ion-icon>
                         </span>
@@ -164,29 +164,28 @@
                 <div class="therapists">
                     <table>
                         <tbody>
-                            <tr>
-                              <td>First Name:</td>
-                              <td style="text-align: center;"> Baby</td>
-                            </tr>
-                            <tr>
-                              <td>Last Name</td>
-                              <td style="text-align: center;">Lou</td>
-                            </tr>
-                            <tr>
-                              <td>Email: </td>
-                              <td style="text-align: center;">girly.girl@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td>Contact#:</td>
-                              <td style="text-align: center;">09457874155</td>
-                            </tr>
-                            <tr>
-                                <td>Address:</td>
-                                <td style="text-align: center;">143 Trinity Ave Cubao</td>
-                              </tr>
-                        
-                          </tbody>
-                        </table>
+                          <tr>
+                            <td>First Name:</td>
+                            <td style="text-align: center;" contenteditable="false"> Baby</td>
+                          </tr>
+                          <tr>
+                            <td>Last Name</td>
+                            <td style="text-align: center;" contenteditable="false">Lou</td>
+                          </tr>
+                          <tr>
+                            <td>Email: </td>
+                            <td style="text-align: center;" contenteditable="false">girly.girl@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td>Contact#:</td>
+                            <td style="text-align: center;" contenteditable="false">09457874155</td>
+                          </tr>
+                          <tr>
+                            <td>Address:</td>
+                            <td style="text-align: center;" contenteditable="false">143 Trinity Ave Cubao</td>
+                          </tr>
+                        </tbody>
+                    </table>
                         
                         
                         
@@ -216,7 +215,8 @@
                                 <td>03/10/2023</td>
                               </tr>
                             </tbody>
-                            <div class="editProfile"><a href="settings.html"><button class="editButton">Edit Details</button></a> 
+                            <div class="editProfile">
+                                <button id="editButton" class="editButton" onclick="editDetails()">Edit Details</button>
                             </div>
                           </table>
                 
@@ -229,7 +229,7 @@
     </div>
 
     <!-- =========== Scripts =========  -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/profile.js"></script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

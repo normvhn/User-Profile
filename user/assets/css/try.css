@@ -265,16 +265,18 @@ body {
     font-size: 24px;
     margin: 0;
     margin-bottom: 5px;
+    color: var(--gold);
   }
   
   p {
     font-size: 16px;
     margin: 0;
+    color: var(--darkblue);
   }
   
   .button-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
   }
   
@@ -585,6 +587,132 @@ h4, .icons {
 .therapists table .icons {
   float: right;
 }
+
+
+/* ==================== test ==================== */
+.booking-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: block;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+  height: 500px;
+  padding: 2rem;
+  background-color: var(--gold);
+  color: var(--darkblue);
+  margin: 0 auto;
+  position: relative;
+}
+
+.booking-wrapper{
+padding: 3rem;
+
+  display: inline-flex;
+ gap: 2rem;
+}
+
+.user-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.accept {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.decline {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.notifications p {
+  margin: 0;
+  display: none;
+}
+
+.ongoing {
+  color: #f1c40f;
+}
+
+.completed {
+  color: #2ecc71;
+}
+
+.cancelled {
+  color: #e74c3c;
+}
+
+.user-info {
+width: 100%;
+display: inline-block;
+padding: 0.5rem;
+margin-bottom: 10px;
+}
+
+.user-info h2 {
+  width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    }
+
+
+    .status-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .status-completed {
+      background-color: #2ecc71;
+    }
+    
+    .status-cancelled {
+      background-color: #e74c3c;
+    }
+    
+    .status-ongoing {
+      background-color: #f1c40f;
+    }
+
+    .time-sched {
+color: grey;
+font-size: small;
+font-style: italic;
+font-weight: 500;
+
+    }
+
+    .services-wrapper ul{
+
+list-style: none;
+color: white;
+
+    }
+
+    /* ================ END ================= */
 
 
 /* ====================== Responsive Design ========================== */
