@@ -1,0 +1,11 @@
+NAV: dashboard, profile, messages, bookings, reviews, payments, sign out
+
+Search bar map: expertise, rates, location
+
+therapist: remove call: leave room for expertise and rates
+
+User: First name, L , M, Username, Social Media
+
+Booking History: Cards - Pay - Cancel
+
+messages - button profile - Reply  
