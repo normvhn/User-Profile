@@ -16,6 +16,10 @@
     <title>Professional's Dashboard</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="assets/css/booking.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -118,59 +122,69 @@
 
 <div class="booking-wrapper">
     <div class="booking-card">
-        <div class="user-profile">
-          <img src="assets/imgs/f1.jpg" alt="User Profile Picture">
-        </div>
-        <div class="user-info">
-          <h2>Name: <span>Maritess Temporal</span></h2>
-          <p>Contact#: <span>0945717478845</span></p>
-          <p>BookingID: <span>121211</span></p>
-          <p>Address: <span>134 Trinity Avenue Cubao QC</span></p>
-          <div class="time-sched"><p>Schedule: <span>Thursday 10AM-12PM 03/23/2023</span></p></div>
-
-          <div class="services-wrapper"><p>Services: <ul><li>Swedish Massage</li><li>Manicure and Pedicure</li></ul></p></div>
-
-
-        </div>
-        <div class="status-badge status-cancelled">Cancelled</div>
-<div class="buttons">
-        <div class="buttons">
-          <button class="accept">Accept</button>
-          <button class="decline">Decline</button>
-        </div>
-        
+      <div class="user-profile">
+        <img src="assets/imgs/f1.jpg" alt="User Profile Picture">
       </div>
-
-
-
+      <div class="user-info">
+        <h2>Name: <span>Maritess Temporal</span></h2>
+        <p>Contact#: <span>0945717478845</span></p>
+        <p>BookingID: <span>121211</span></p>
+        <p>Address: <span>134 Trinity Avenue Cubao QC</span></p>
+        <div class="time-sched"><p>Schedule: <span>Thursday 10AM-12PM 03/23/2023</span></p></div>
+        <div class="services-wrapper"><p>Services: <ul><li>Swedish Massage</li><li>Manicure and Pedicure</li></ul></p></div>
+      </div>
+      <div class="status-badge status-ongoing">On-Going</div>
+      <div class="buttons">
+        <div class="buttons">
+          <button class="accept">Pay</button>
+          <button class="decline" onclick="document.getElementById('id01').style.display='block'">Cancel</button>
+        </div>
+      </div>
     </div>
-              <div class="booking-card">
-                <div class="user-profile">
-                  <img src="assets/imgs/f1.jpg" alt="User Profile Picture">
-                </div>
-                <div class="user-info">
-                  <h2>Name: <span>Maritess Temporal</span></h2>
-                  <p>Contact#: <span>0945717478845</span></p>
-                  <p>BookingID: <span>121211</span></p>
-                  <p>Address: <span>134 Trinity Avenue Cubao QC</span></p>
-                  <div class="time-sched"><p>Schedule: <span>Thursday 10AM-12PM 03/23/2023</span></p></div>
 
-                  <div class="services-wrapper"><p>Services: <ul><li>Swedish Massage</li><li>Manicure and Pedicure</li></ul></p></div>
-
-
-                </div>
-                <div class="status-badge status-ongoing">On-Going</div>
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>Cancel Appointment</h1>
+          <p>Are you sure you want to cancel your appointment?</p>
+    
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="button" class="deletebtn">Delete</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    
+      <div class="booking-card">
+          <div class="user-profile">
+            <img src="assets/imgs/f1.jpg" alt="User Profile Picture">
+          </div>
+          <div class="user-info">
+            <h2>Name: <span>Maritess Temporal</span></h2>
+            <p>Contact#: <span>0945717478845</span></p>
+            <p>BookingID: <span>121211</span></p>
+            <p>Address: <span>134 Trinity Avenue Cubao QC</span></p>
+            <div class="time-sched"><p>Schedule: <span>Thursday 10AM-12PM 03/23/2023</span></p></div>
+  
+            <div class="services-wrapper"><p>Services: <ul><li>Swedish Massage</li><li>Manicure and Pedicure</li></ul></p></div>
+  
+  
+          </div>
+          <div class="status-badge status-cancelled">Cancelled</div>
   <div class="buttons">
-                <div class="buttons">
-                  <button class="accept">Accept</button>
-                  <button class="decline">Decline</button>
-                </div>
-               
-              </div>
-
-
-
-            </div>
+          <div class="buttons">
+            <button class="accept">Accept</button>
+            <button class="decline">Decline</button>
+          </div>
+          
+        </div>
+  
+  
+  
+      </div>
 
               <div class="booking-card">
                 <div class="user-profile">
@@ -373,6 +387,8 @@
     } else if (status === 'ongoing') {
       statusBadge.classList.add('status-ongoing');
     }</script>
+    <script src="assets/js/booking.js"></script>
+
     <script src="assets/js/main.js"></script>
 
     <!-- ====== ionicons ======= -->

@@ -221,126 +221,126 @@ body {
 /* =========== END ============= */
 
 .booking-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    display: block;
-    justify-content: left;
-    align-items: center;
-    width: 25%;
-    height: 500px;
-    padding: 2rem;
-    background-color: var(--gold);
-    color: var(--darkblue);
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .booking-wrapper{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: block;
+  justify-content: left;
+  align-items: center;
+  width: 25%;
+  height: 500px;
+  padding: 2rem;
+  background-color: var(--gold);
+  color: var(--darkblue);
+  margin: 0 auto;
+  position: relative;
+}
+
+.booking-wrapper{
 padding: 3rem;
 
-    display: inline-flex;
-   gap: 2rem;
-  }
+  display: inline-flex;
+ gap: 2rem;
+}
 
-  .user-profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  .user-info h2 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  .buttons button {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  
-  .accept {
-    background-color: #2ecc71;
-    color: #fff;
-  }
-  
-  .decline {
-    background-color: #e74c3c;
-    color: #fff;
-  }
-  
-  .notifications p {
-    margin: 0;
-    display: none;
-  }
-  
-  .ongoing {
-    color: #f1c40f;
-  }
-  
-  .completed {
-    color: #2ecc71;
-  }
-  
-  .cancelled {
-    color: #e74c3c;
-  }
-  
-  .user-info {
+.user-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.accept {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.decline {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.notifications p {
+  margin: 0;
+  display: none;
+}
+
+.ongoing {
+  color: #f1c40f;
+}
+
+.completed {
+  color: #2ecc71;
+}
+
+.cancelled {
+  color: #e74c3c;
+}
+
+.user-info {
 width: 100%;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-bottom: 10px;
-  }
+display: inline-block;
+padding: 0.5rem;
+margin-bottom: 10px;
+}
 
-  .user-info h2 {
-    width: 100%;
-      justify-content: space-between;
-      padding: 0.5rem;
-      margin-bottom: 10px;
-      }
+.user-info h2 {
+  width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    }
 
 
-      .status-badge {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 5px 10px;
-        border-radius: 5px;
-        color: #fff;
-        font-weight: bold;
-      }
-      
-      .status-completed {
-        background-color: #2ecc71;
-      }
-      
-      .status-cancelled {
-        background-color: #e74c3c;
-      }
-      
-      .status-ongoing {
-        background-color: #f1c40f;
-      }
+    .status-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .status-completed {
+      background-color: #2ecc71;
+    }
+    
+    .status-cancelled {
+      background-color: #e74c3c;
+    }
+    
+    .status-ongoing {
+      background-color: #f1c40f;
+    }
 
-      .time-sched {
+    .time-sched {
 color: grey;
 font-size: small;
 font-style: italic;
 font-weight: 500;
 
-      }
+    }
 
-      .services-wrapper ul{
+    .services-wrapper ul{
 
- list-style: none;
+list-style: none;
 color: white;
 
-      }
+    }
 
       /* ====================== Responsive Design ========================== */
       @media (max-width: 991px) {
@@ -419,3 +419,108 @@ margin-bottom: 2rem;
   margin-bottom: 2rem;
 }
       }
+
+/* ============= Cancel ============*/
+
+* {box-sizing: border-box}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+  margin-top: 70px;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  text-align: center;
+}
+.container .p {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--gold);
+  opacity: 1;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 300px;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+    width: 100%;
+  }
+}
