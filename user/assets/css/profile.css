@@ -95,8 +95,12 @@ body {
   line-height: 75px;
   text-align: center;
 }
-.navigation ul li a .icon ion-icon {
+
+.navigation ul li a .icon img {
   font-size: 1.75rem;
+  width: 150px;
+  padding-top: 20px;
+  padding-left: 20px ;
 }
 
 .navigation ul li a .title {
@@ -665,7 +669,7 @@ input {
   .main.active .toggle {
     color: #fff;
     position: fixed;
-    right: 0;
+    right: 300;
     left: initial;
   }
 }
